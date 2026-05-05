@@ -1,0 +1,431 @@
+body {
+    background-color: rgb(0, 0, 33);
+    color: white;
+    font-family: "Noto Sans", sans-serif;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 85px;
+    font-size: 25px;
+    background-color: rgb(18, 18, 62);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+
+}
+
+nav ul li {
+    list-style: none;
+    margin: 0 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+nav ul li a:hover {
+    color: rgb(131, 84, 186);
+    font-size: 1.32rem;
+}
+
+.right {
+    font-size: 1.3rem;
+}
+
+
+.firstsection {
+    display: flex;
+    justify-content: space-around;
+    margin: 23px 0px;
+    align-items: center;
+}
+
+.firstsection>div {
+    width: 30%;
+}
+
+.leftsection {
+
+    font-size: 2.5rem;
+
+}
+
+.leftsection .button {
+
+    padding: 10px;
+
+}
+
+.leftsection .btn {
+
+    padding: 12px;
+    background: blueviolet;
+    color: white;
+    border: 2px solid white;
+    border-radius: 6px;
+    font-size: 20px;
+    cursor: pointer;
+
+}
+
+.rightsection img {
+    width: 96%;
+    height: 107%;
+    margin: 1% -17%;
+    padding: 0px;
+
+}
+
+.border {
+    border: 2px solid white;
+}
+
+.purple {
+    color: blueviolet;
+}
+
+#element {
+    color: blueviolet;
+}
+
+.button a {
+    text-decoration: none;
+}
+
+
+.secondsection {
+    max-width: 80vw;
+    margin: auto;
+    height: 80vh;
+}
+
+main hr {
+    border: 0;
+    height: 1px;
+    background: #b55bfe;
+    margin: 88px 80px;
+}
+
+.secondsection h2 {
+    font-size: 1.9rem;
+}
+
+/* 1. The Main Container for the timeline */
+.secondsection .box {
+    position: relative;
+    /* Needed for the timeline bar pseudo-element */
+    display: flex;
+    justify-content: space-between;
+    /* This is key: it spaces your items out evenly */
+    align-items: center;
+    width: 80vw;
+    margin: 100px 0;
+    /* Increased margin for better spacing */
+}
+
+/* 2. The Timeline Bar (using a pseudo-element) */
+.secondsection .box::before {
+    content: '';
+    position: absolute;
+    top: 25px;
+    /* Position it vertically where the center of the icon will be */
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    z-index: 1;
+    /* Place it behind the icons */
+}
+
+/* 3. Each Timeline Item */
+.secondsection .vertical {
+    display: flex;
+    flex-direction: column;
+    /* Stacks the content vertically */
+    align-items: center;
+    /* Centers the content horizontally */
+    width: 200px;
+    /* Give each item a consistent width */
+    text-align: center;
+    position: relative;
+    /* This is important for z-index to work */
+    z-index: 2;
+    /* Place the items in front of the timeline bar */
+}
+
+/* 4. The Icon on the timeline */
+.image-top {
+    width: 50px;
+    /* Make the icon larger and circular */
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid white;
+    background-color: rgb(0, 0, 33);
+    /* Match your page background */
+}
+
+/* 5. The Title and Description */
+.vertical-tital {
+    margin-top: 15px;
+    /* Add space between icon and title */
+    font-weight: bold;
+    color: white;
+    /* Make sure text is visible */
+}
+
+.vertical-desc {
+    margin-top: 10px;
+    color: gray;
+    font-size: 14px;
+}
+
+footer {
+    background-color: #090630;
+
+}
+
+.footer {
+    display: flex;
+    padding: 23px 122px;
+    justify-content: space-evenly;
+}
+
+footer ul {
+    list-style: none;
+}
+
+.footer>div {
+    width: 230px;
+}
+
+.footer.footer-rights {
+    text-align: center;
+    color: gray;
+    padding: 12px 0px;
+}
+
+.text-gray {
+    color: gray;
+}
+
+
+/* --- About Page Styles --- */
+
+.about-section {
+    max-width: 80vw;
+    margin: 80px auto;
+    /* Adds space above and below */
+}
+
+.about-intro {
+    display: flex;
+    align-items: center;
+    /* Vertically aligns the image and text */
+    justify-content: center;
+    gap: 50px;
+    /* Space between the image and text */
+}
+
+.about-image img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    /* Makes the image circular */
+    object-fit: cover;
+    /* Prevents the image from stretching */
+    border: 4px solid blueviolet;
+    /* Adds a purple border */
+}
+
+.about-text {
+    max-width: 600px;
+}
+
+.about-text h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    color: rgb(200, 200, 200);
+    /* A slightly off-white for readability */
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* --- Skills Section Styles --- */
+.skills-section {
+    max-width: 80vw;
+    margin: 40px auto 80px;
+    text-align: center;
+}
+
+.skills-section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+}
+
+.skills-grid {
+    display: grid;
+    /* Creates a responsive grid that wraps automatically */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+.skill-item {
+    background-color: rgb(18, 18, 62);
+    /* Same color as your navbar */
+    padding: 25px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: 1px solid #2a2a68;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.skill-item:hover {
+    transform: translateY(-5px);
+    /* Lifts the card up on hover */
+    background-color: blueviolet;
+    /* Changes color on hover */
+}
+
+/* --- Contact Page Styles --- */
+
+.contact-section {
+    max-width: 80vw;
+    margin: 80px auto;
+    text-align: center;
+}
+
+.contact-section h1 {
+    font-size: 2.8rem;
+}
+
+.contact-subtitle {
+    font-size: 1.1rem;
+    color: rgb(200, 200, 200);
+    max-width: 600px;
+    margin: 15px auto 50px;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    text-align: left;
+}
+
+/* --- Form Styles --- */
+.contact-form {
+    flex: 2;
+    /* Makes the form take up 2/3 of the space */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #ccc;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #2a2a68;
+    background-color: rgb(18, 18, 62);
+    color: white;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: blueviolet;
+}
+
+/* Using the existing .btn class from your homepage for consistency */
+.contact-form .btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2rem;
+}
+
+
+/* --- Contact Info Styles --- */
+.contact-info {
+    flex: 1;
+    /* Makes the info section take up 1/3 of the space */
+}
+
+.contact-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: blueviolet;
+}
+
+.contact-info p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.contact-info p strong {
+    color: #ccc;
+}
+
+.contact-info a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: blueviolet;
+}
+
+/* --- Social Links --- */
+.social-links {
+    margin-top: 30px;
+}
+
+
+.social-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgb(18, 18, 62);
+    color: white;
+    border-radius: 50%;
+    margin-right: 15px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: blueviolet;
+    transform: translateY(-3px);
+}
